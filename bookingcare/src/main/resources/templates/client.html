@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+<p th:text="${'Xin chào, ' + name}"></p>
+<p>Chúng tôi gửi thông tin truy cập hệ thống của bạn:</p>
+<p th:text="${'- ' + username}"></p>
+
+<p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên Booking Care</p>
+
+<p>Nếu các thông tin trên là đúng, vui lòng click vào đường link bên dưới để xác nhận và hoàn tất đặt lịch khám bệnh:</p>
+
+<div>
+    <a th:href="${verificationLink}" target="_blank">Click vào đây để xác nhận</a>
+</div>
+
+<div>Xin trân thành cảm ơn</div>
+</body>
+</html>

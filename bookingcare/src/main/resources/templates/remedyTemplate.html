@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn thuốc từ bác sĩ</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Đơn thuốc cho bệnh nhân: <span th:text="${patientName}"></span></h1>
+    <p>Bác sĩ: <span th:text="${doctorName}"></span></p>
+    <p>Ngày khám: <span th:text="${bookingDate}"></span></p>
+
+    <!-- Đính kèm ảnh base64 -->
+    <img th:src="@{'data:image/png;base64,' + ${base64Image}}" alt="Prescription Image" />
+</body>
+</html>
